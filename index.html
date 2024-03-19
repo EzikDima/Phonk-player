@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHONK Player</title>
+    <title>Record Player</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -26,7 +26,14 @@
         />
       </div>
     </div>
-    <audio loop class="my-song" src="Lxkxs Phonkwave.mp3" preload="auto"></audio>
+    <select id="songSelect">
+      <option value="Lxkxs Phonkwave.mp3">Lxkxs Phonkwave</option>
+      <option value="DVRST – Close Eyes.mp3">DVRST – Close Eyes</option>
+      <option value="glichery-sea-of-problems-mp3.mp3">glichery-sea-of-problems</option>
+      <option value="rhythmrebel-ashi-ashi-mp3.mp3">rhythmrebel-ashi-ashi</option>
+    </select>
+    
+    <audio loop id="mySong" preload="auto"></audio>
     <!-- Script -->
     <script src="script.js"></script>
   </body>
