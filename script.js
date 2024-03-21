@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let slider = document.querySelector(".slider");
 
   songSelect.addEventListener('change', function() {
-    mySong.volume = 1;
+    mySong.volume = 100;
     mySong.src = this.value;
     mySong.play();
   });
