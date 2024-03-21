@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let mySong = document.getElementById('mySong');
   let slider = document.querySelector(".slider");
 
-  mySong.volume = 1;
-
   songSelect.addEventListener('change', function() {
+    mySong.volume = 1;
     mySong.src = this.value;
     mySong.play();
   });
