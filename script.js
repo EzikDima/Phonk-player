@@ -11,19 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
   let btn = document.querySelector(".btn");
   let record = document.querySelector(".record");
   let toneArm = document.querySelector(".tone-arm");
-  let slider = document.querySelector(".slider");
 
   btn.addEventListener("click", () => {
     if (state == false) {
       record.classList.add("on");
       toneArm.classList.add("play");
       setTimeout(() => {
-        mySong.play(); // Используйте mySong вместо song
+        mySong.play();
       }, 1000);
     } else {
       record.classList.remove("on");
       toneArm.classList.remove("play");
-      mySong.pause(); // Используйте mySong вместо song
+      mySong.pause();
     }
     state = !state;
   });
