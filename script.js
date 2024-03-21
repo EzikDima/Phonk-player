@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let mySong = document.getElementById('mySong');
   let slider = document.querySelector(".slider");
 
+  mySong.volume = 1;
+
   songSelect.addEventListener('change', function() {
     mySong.src = this.value;
     mySong.play();
@@ -28,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     state = !state;
   });
 
+  // Добавьте обработчик событий для слайдера, чтобы изменить громкость аудио
   slider.addEventListener('input', function() {
-    mySong.volume = this.value / 100; 
+    mySong.volume = this.value / 100; // Значение слайдера должно быть между 0 и 100
   });
 });
-
