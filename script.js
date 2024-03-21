@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var songSelect = document.getElementById('songSelect');
-  var mySong = document.getElementById('mySong');
+  let songSelect = document.getElementById('songSelect');
+  let mySong = document.getElementById('mySong');
+  let slider = document.querySelector(".slider");
 
   songSelect.addEventListener('change', function() {
     mySong.src = this.value;
@@ -26,4 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     state = !state;
   });
+
+  slider.addEventListener('input', function() {
+    mySong.volume = this.value / 100; 
+  });
 });
+
